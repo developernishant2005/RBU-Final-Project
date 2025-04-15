@@ -23,10 +23,10 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cookieParser());
 
-// app.use(cors(
-//    origin: true,
-//   credentials: true
-// ));
+app.use(cors(
+  origin: "http://localhost:8080",
+  credentials: true 
+));
  
 // apis
 app.use("/api/v1/media", mediaRoute);
