@@ -9,13 +9,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://rbu-final-project-1.onrender.com',
-        changeOrigin: true,
-        rewrite: path => path.replace(/^\/api/, ''),
-      }
-    }
-  }
 })
